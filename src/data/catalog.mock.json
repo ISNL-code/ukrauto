@@ -1,0 +1,100 @@
+[
+  {
+    "id": "a1b2c3d4",
+    "name": "A10",
+    "agregates": [
+      {
+        "id": "agg1",
+        "name": "Двигатель",
+        "node": [
+          {
+            "id": "node1",
+            "name": "Группа блока двигателя",
+            "img": ["images/1111.png"],
+            "parts": [
+              {
+                "id": "part1",
+                "schemeNumber": 1,
+                "partNumber": 1001675571,
+                "descriptionRu": "Винт с шестигранной головкой",
+                "descriptionUk": "Hexagon Screw Plug",
+                "quantity": 1
+              },
+              {
+                "id": "part2",
+                "schemeNumber": 2,
+                "partNumber": 1001675572,
+                "descriptionRu": "Шайба плоская",
+                "descriptionUk": "Flat Washer",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "node2",
+            "name": "Топливная система",
+            "img": ["images/1111.png"],
+            "parts": [
+              {
+                "id": "part3",
+                "schemeNumber": 2,
+                "partNumber": 2002345678,
+                "descriptionRu": "Топливный насос",
+                "descriptionUk": "Fuel Pump",
+                "quantity": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agg2",
+        "name": "Шасси",
+        "node": [
+          {
+            "id": "node3",
+            "name": "Колёсная группа",
+            "img": ["images/1111.png"],
+            "parts": [
+              {
+                "id": "part4",
+                "schemeNumber": 1,
+                "partNumber": 3001234567,
+                "descriptionRu": "Колесо переднее",
+                "descriptionUk": "Front Wheel",
+                "quantity": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b5f6g7h8",
+    "name": "B20",
+    "agregates": [
+      {
+        "id": "agg3",
+        "name": "Коробка передач",
+        "node": [
+          {
+            "id": "node4",
+            "name": "Ведущая шестерня",
+            "img": ["images/1111.png"],
+            "parts": [
+              {
+                "id": "part5",
+                "schemeNumber": 1,
+                "partNumber": 4009876543,
+                "descriptionRu": "Шестерня главная",
+                "descriptionUk": "Main Gear",
+                "quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
