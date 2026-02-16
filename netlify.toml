@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"   # команда збірки
+  publish = "build"           # папка, яку потрібно хостити
+
+[dev]
+  command = "npm start"
+  port = 3000

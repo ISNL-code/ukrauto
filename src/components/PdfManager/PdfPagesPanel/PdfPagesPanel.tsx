@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import { useDrop } from "react-dnd";
 import { DraggablePdfPage } from "../../DraggablePdfPage";
 import { PdfPage } from "../../../types/catalog";
@@ -15,7 +15,6 @@ interface PdfPagesPanelProps {
 export const PdfPagesPanel = forwardRef<HTMLDivElement, PdfPagesPanelProps>(
   ({ pages, movePage, removePage, handleFileChange, loading }, ref) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const prevLengthRef = useRef<number>(pages.length);
 
     // DnD drop
     const [, drop] = useDrop({
@@ -25,7 +24,7 @@ export const PdfPagesPanel = forwardRef<HTMLDivElement, PdfPagesPanelProps>(
       },
     });
 
-    // Скролл вверх только если страниц стало больше
+    // Скролл вверх только если страниц стало больше позже
     // useEffect(() => {
     //   if (containerRef.current && pages.length > prevLengthRef.current) {
     //     containerRef.current.scrollTop = 0;
