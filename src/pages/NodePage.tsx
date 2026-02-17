@@ -149,7 +149,7 @@ const NodePage: React.FC = () => {
         {(node.img ?? []).length > 0 && (
           <Paper
             elevation={0}
-            sx={{ width: 900, overflowY: "auto", flexShrink: 0 }}
+            sx={{ width: 1000, overflowY: "auto", flexShrink: 0 }}
           >
             <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
               {(node.img ?? []).map((src, index) => (
