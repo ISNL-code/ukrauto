@@ -45,6 +45,7 @@ const Header: React.FC<HeaderProps> = ({
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [openLogin, setOpenLogin] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   const handleLogin = () => {
     onLogin(password);
@@ -86,6 +87,11 @@ const Header: React.FC<HeaderProps> = ({
             <Autocomplete
               freeSolo
               options={allParts}
+              value={null} // выбранное значение не храним
+              inputValue={inputValue}
+              onInputChange={(event, newInputValue) => {
+                setInputValue(newInputValue);
+              }}
               sx={{ minWidth: 300, maxWidth: 420 }}
               getOptionLabel={(option) =>
                 typeof option === "string" ? option : option.label
@@ -99,8 +105,12 @@ const Header: React.FC<HeaderProps> = ({
               }
               onChange={(event, value) => {
                 if (!value || typeof value === "string") return;
+
                 setHighlightPart(value.partId);
                 navigate(`/catalog/${value.modelId}/node/${value.nodeId}`);
+
+                // 🔥 очищаем инпут после перехода
+                setInputValue("");
               }}
               renderInput={(params) => (
                 <TextField
